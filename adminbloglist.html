@@ -1,0 +1,635 @@
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+<div class="container mx-auto px-4 py-6 w-full p-2 bg-white rounded-xl flex-col gap-5 flex">
+    <div class="p-2">
+        <!-- Search and Tabs Section -->
+
+        <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+            <!-- Tabs -->
+            <div class="flex space-x-4">
+                <h1 class="text-2xl font-bold text-gray-900">Blog List</h1>
+            </div>
+
+            <!-- Search -->
+            <div class="relative">
+                <form action="http://result.com/admin/blogs" method="GET">
+                    <input type="text" name="search" placeholder="Search" value="" class="pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-blue-500">
+                    <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </form>
+            </div>
+        </div>
+
+        <div class="flex space-x-4 justify-end mt-2">
+            <!-- Add New Post Button -->
+            <a href="http://result.com/admin/blogs/create" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                Add New Post
+            </a>
+
+            <!-- View Trash Button -->
+            <a href="http://result.com/admin/blogs/trash" class="inline-block px-6 py-2.5 bg-gray-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out">
+                View Trash
+            </a>
+        </div>
+    </div>
+
+    
+    <table class="min-w-full bg-white border border-gray-200 rounded-lg mb-6">
+        <thead>
+            <tr>
+                <th class="px-4 py-2 border-b">Title</th>
+                <th class="px-4 py-2 border-b">Author</th>
+                <th class="px-4 py-2 border-b">Category</th>
+                <th class="px-4 py-2 border-b">Status</th>
+                <th class="px-4 py-2 border-b">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+                            <tr>
+                    <td class="px-4 py-2 border-b">test</td>
+                    <td class="px-4 py-2 border-b">Janak kafle</td>
+                    <td class="px-4 py-2 border-b">test</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/1/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/1" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/1" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">How would my result appear after sending SMS entering my data on site ?</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">test</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/2/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/2" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/2" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Amet sit et qui dolores in.</td>
+                    <td class="px-4 py-2 border-b">Janak kafle</td>
+                    <td class="px-4 py-2 border-b">Catogory 3</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/4/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/4" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/4" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Dicta aliquid dicta blanditiis a.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">Catogory 4</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/5/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/5" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/5" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Corrupti nostrum ullam necessitatibus quas et exercitationem doloremque accusantium.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">test</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/6/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/6" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/6" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Eos nihil voluptas non vel minima accusamus quos.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">test</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/7/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/7" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/7" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Nostrum nemo nisi a.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">test</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/8/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/8" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/8" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Perferendis necessitatibus sunt occaecati aut molestiae nemo nam.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">Catogory 4</td>
+                    <td class="px-4 py-2 border-b">
+                                                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Draft</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/9/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/9" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/9" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Dolor sint dicta sapiente possimus ea.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">catogory 2</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/10/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/10" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/10" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Adipisci eius dolorum earum magni molestias.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">catogory 2</td>
+                    <td class="px-4 py-2 border-b">
+                                                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Draft</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/11/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/11" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/11" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Iure voluptatem neque id est corrupti.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">Catogory 4</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/12/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/12" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/12" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Sit soluta quasi fuga numquam.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">Catogory 3</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/13/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/13" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/13" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Assumenda nobis labore molestiae.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">Catogory 3</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/14/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/14" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/14" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Voluptatum sunt sunt velit possimus ea.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">test</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/15/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/15" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/15" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Aut nesciunt eius porro.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">Catogory 4</td>
+                    <td class="px-4 py-2 border-b">
+                                                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Draft</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/16/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/16" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/16" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Consequuntur eum voluptate eos.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">Catogory 4</td>
+                    <td class="px-4 py-2 border-b">
+                                                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Draft</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/17/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/17" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/17" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Iusto id voluptatum blanditiis quia.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">catogory 2</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/18/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/18" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/18" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Non aperiam et ipsa labore ut.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">Catogory 4</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/19/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/19" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/19" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Maxime est facilis expedita non voluptatem dolores.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">Catogory 4</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/20/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/20" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/20" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Cum ducimus non saepe minus omnis eveniet qui voluptas.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">catogory 2</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/21/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/21" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/21" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Cumque doloribus eos quae beatae distinctio.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">Catogory 3</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/22/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/22" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/22" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Illo nam sit fuga eum.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">catogory 2</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/23/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/23" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/23" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Placeat quia nihil omnis delectus minima consequatur.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">catogory 2</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/24/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/24" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/24" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Cupiditate dolore consequatur et ut vel ad nostrum.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">test</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/25/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/25" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/25" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                            <tr>
+                    <td class="px-4 py-2 border-b">Sunt quia eligendi distinctio voluptate.</td>
+                    <td class="px-4 py-2 border-b">Samay Sharma</td>
+                    <td class="px-4 py-2 border-b">catogory 2</td>
+                    <td class="px-4 py-2 border-b">
+                                                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">Published</span>
+                                            </td>
+                    <td class="px-4 py-2 border-b">
+                        <a href="http://result.com/admin/blogs/26/edit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                            <i class="bi bi-pencil-square"></i> 
+                        </a>
+                        <a href="http://result.com/blog/26" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <form action="http://result.com/admin/blogs/26" method="POST" class="inline">
+                            <input type="hidden" name="_token" value="nZG9BdXbLFDP5rrPaWT7Ep3oLgUgtL2hoQNDxeu8" autocomplete="off">                            <input type="hidden" name="_method" value="DELETE">                            <button type="submit" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                    </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <nav role="navigation" aria-label="Pagination Navigation" class="flex items-center justify-between">
+        <div class="flex justify-between flex-1 sm:hidden">
+                            <span class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 cursor-default leading-5 rounded-md dark:text-gray-600 dark:bg-gray-800 dark:border-gray-600">
+                    « Previous
+                </span>
+            
+                            <a href="http://result.com/admin/blogs?page=2" class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 rounded-md hover:text-gray-500 focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:focus:border-blue-700 dark:active:bg-gray-700 dark:active:text-gray-300">
+                    Next »
+                </a>
+                    </div>
+
+        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+            <div>
+                <p class="text-sm text-gray-700 leading-5 dark:text-gray-400">
+                    Showing
+                                            <span class="font-medium">1</span>
+                        to
+                        <span class="font-medium">25</span>
+                                        of
+                    <span class="font-medium">31</span>
+                    results
+                </p>
+            </div>
+
+            <div>
+                <span class="relative z-0 inline-flex rtl:flex-row-reverse shadow-sm rounded-md">
+                    
+                                            <span aria-disabled="true" aria-label="&amp;laquo; Previous">
+                            <span class="relative inline-flex items-center px-2 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 cursor-default rounded-l-md leading-5 dark:bg-gray-800 dark:border-gray-600" aria-hidden="true">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                        </span>
+                    
+                    
+                                            
+                        
+                        
+                                                                                                                        <span aria-current="page">
+                                        <span class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-500 bg-white border border-gray-300 cursor-default leading-5 dark:bg-gray-800 dark:border-gray-600">1</span>
+                                    </span>
+                                                                                                                                <a href="http://result.com/admin/blogs?page=2" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 dark:hover:text-gray-300 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Go to page 2">
+                                        2
+                                    </a>
+                                                                                                        
+                    
+                                            <a href="http://result.com/admin/blogs?page=2" rel="next" class="relative inline-flex items-center px-2 py-2 -ml-px text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-r-md leading-5 hover:text-gray-400 focus:z-10 focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-gray-100 active:text-gray-500 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Next &amp;raquo;">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                                    </span>
+            </div>
+        </div>
+    </nav>
+
+</div>
