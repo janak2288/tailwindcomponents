@@ -1,5 +1,5 @@
 This project is designed to be a valuable resource for students. The frontend has been designed using Tailwind CSS, ensuring a modern and responsive design without any external CSS.
-
+**Note: ** This repo doesnot contain full section of project its just some component for UI only .
 ## Contribution
 
 We invite you to contribute to this project to gain practical experience. If you're interested in contributing, please follow these guidelines:
