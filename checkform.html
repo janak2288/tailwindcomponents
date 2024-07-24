@@ -1,0 +1,57 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="container  px-4 py-6">
+  
+
+
+<div class="max-w-xl mx-auto ">
+
+
+    <div class="uppercase bg-gradient-to-r from-indigo-600 to-violet-600 rounded-t-2xl  text-center text-white py-4 text-2xl font-bold"> <i class="fa-solid fa-magnifying-glass"></i>
+                           Result Check
+                        </div>   
+    <!-- Search Form -->
+    <form action="http://result.com/result/seeresult" method="POST" class="bg-white p-6 rounded-lg shadow-lg w-full h-full lg:rounded-l-2xl rounded-2xl bg-blend-multiply bg-indigo-700">
+        <input type="hidden" name="_token" value="M9jSKJS8gPUmE3LIKUFEKZvlhXU7Thi9CaSw3HZc" autocomplete="off">        <div class="space-y-6">
+            <!-- Result Selection -->
+                <div class="flex items-center space-x-4">
+
+
+
+                <label for="result_slug" class="block text-sm font-medium text-gray-700 mb-2 flex items-center w-1/5">
+                 Select Result
+                </label>
+                <select name="result_slug" id="result_slug" class="block w-full border-indigo-600 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 transition duration-200 ease-in-out" required="">
+                    <option value="">Select Result</option>
+                                            <option value="see80">SEE 2080</option>
+                                    </select>
+                            </div>
+
+            <!-- Symbol Number Input -->
+        <div class="flex items-center space-x-4">
+    <label for="symbol_number" class="block text-sm font-medium text-gray-700 mb-2 flex items-center w-1/5">
+     Symbol
+    </label>
+<input type="text" name="symbol_number" id="symbol_number" placeholder="Enter Symbol Number" value="" class="block w-full  border-indigo-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200 ease-in-out " required="">
+</div>
+
+        <!-- Symbol Number Input -->
+        <div class="flex items-center space-x-4">
+    <label for="name" class="block text-sm font-medium text-gray-700 mb-2 flex items-center w-1/5">
+     Name
+    </label>
+    <input type="text" name="name" id="name" placeholder="Enter Your Name" value="" class="block w-full  border-indigo-600 rounded-md shadow-sm focus:border-indigo-500 focus:ring-gray-700 transition duration-200 ease-in-out">
+    </div>
+
+
+            <!-- Search Button -->
+            <div class="flex justify-end">
+ <button type="submit" class="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-indigo-600 text-indigo-600 text-white">
+<span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-indigo-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span><span class="relative text-indigo-600 transition duration-300 group-hover:text-white ease">    <i class="fa fa-search mr-2"></i> Check </span>
+</button>
+            </div>
+        </div>
+    </form>
+</div>
+    <!-- Display Result Message -->
+    </div>
